@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 //    let color2       = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
 //    let color3       = UIColor(red: 0.5, green: 0.0, blue: 0.5, alpha: 0.5)
 //    let color4       = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.5)
-    let colorArray : [UIColor] = [UIColor(red: 0.0, green: 0.5, blue: 0.5, alpha: 0.5),UIColor(red: 0.5, green: 0.5, blue: 0.0, alpha: 0.5),UIColor(red: 0.5, green: 0.0, blue: 0.5, alpha: 0.5),UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.5)]
+    let colorArray : [UIColor] = [UIColor(red: 0.0, green: 0.5, blue: 0.5, alpha: 0.5),UIColor(red: 0.5, green: 0.5, blue: 0.0, alpha: 0.5),UIColor(red: 0.5, green: 0.0, blue: 0.0, alpha: 0.5),UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.5)]
     var n:CGFloat = 0
     var k:CGFloat = 0.0
     var timer1:NSTimer!
