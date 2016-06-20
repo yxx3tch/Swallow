@@ -104,7 +104,7 @@
 		366E441A1B429A1E002038AB = {
 			isa = PBXGroup;
 			children = (
-				366E44251B429A1E002038AB /* Forecastone */,
+				366E44251B429A1E002038AB /* Swallow */,
 				366E443B1B429A1E002038AB /* ForecastoneTests */,
 				366E44241B429A1E002038AB /* Products */,
 			);
@@ -119,7 +119,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		366E44251B429A1E002038AB /* Forecastone */ = {
+		366E44251B429A1E002038AB /* Swallow */ = {
 			isa = PBXGroup;
 			children = (
 				366E44281B429A1E002038AB /* AppDelegate.swift */,
@@ -134,6 +134,7 @@
 				363404D81B4C31F6005CA5C0 /* Sound */,
 				366E44261B429A1E002038AB /* Supporting Files */,
 			);
+			name = Swallow;
 			path = Forecastone;
 			sourceTree = "<group>";
 		};
