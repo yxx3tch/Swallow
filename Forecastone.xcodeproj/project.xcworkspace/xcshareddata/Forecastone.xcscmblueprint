@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "551EDA2440C8C3F1AD7D4C110816E7BB6E32AC44",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "551EDA2440C8C3F1AD7D4C110816E7BB6E32AC44" : 0,
+    "F5022297E4378EA9BFE61789ECDDAD619DB08DB5" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F54A5F75-E8BB-43E5-BDEE-3A38C2F3A034",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "551EDA2440C8C3F1AD7D4C110816E7BB6E32AC44" : "Swallow2\/",
+    "F5022297E4378EA9BFE61789ECDDAD619DB08DB5" : "Forecastone"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Forecastone",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Forecastone.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yxx3tch\/Swallow.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "551EDA2440C8C3F1AD7D4C110816E7BB6E32AC44"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/satoruhosaka\/Forecastone.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F5022297E4378EA9BFE61789ECDDAD619DB08DB5"
+    }
+  ]
+}

@@ -17,7 +17,7 @@ class MyParserDelegate: NSObject, NSXMLParserDelegate {
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict:[String : String]) {
         if elementName == "period" {
             isPrecip = true
-            num++
+            num += 1
         }
     }
     
@@ -30,7 +30,7 @@ class MyParserDelegate: NSObject, NSXMLParserDelegate {
     func parser(parser: NSXMLParser, foundCharacters preString: String){
         if isPrecip {
             if num > 44 {
-                if num < 54 {
+                if num < 56 {
                     precip = Int(preString)!
                     precipArray.append(precip)
                 }

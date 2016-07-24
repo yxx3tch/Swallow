@@ -27,6 +27,11 @@
 		6D7F15871C193B6B0024CBC7 /* 70.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F157D1C193B6B0024CBC7 /* 70.wav */; };
 		6D7F15881C193B6B0024CBC7 /* 80.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F157E1C193B6B0024CBC7 /* 80.wav */; };
 		6D7F15891C193B6B0024CBC7 /* 90.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F157F1C193B6B0024CBC7 /* 90.wav */; };
+		DCEB2C171D3FCA5B006792A2 /* RippleCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEB2C161D3FCA5B006792A2 /* RippleCustomSegue.swift */; };
+		DCEB2C191D3FD10F006792A2 /* RippleCustomSegueUnwind.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEB2C181D3FD10F006792A2 /* RippleCustomSegueUnwind.swift */; };
+		DCEB2C1B1D3FF2CC006792A2 /* UpdownCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEB2C1A1D3FF2CC006792A2 /* UpdownCustomSegue.swift */; };
+		DCEB2C1D1D3FFD4A006792A2 /* UpdownCustomSegueUnwind.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEB2C1C1D3FFD4A006792A2 /* UpdownCustomSegueUnwind.swift */; };
+		DCEB2C1F1D422883006792A2 /* swallow-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCEB2C1E1D422883006792A2 /* swallow-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +69,11 @@
 		6D7F157D1C193B6B0024CBC7 /* 70.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 70.wav; sourceTree = "<group>"; };
 		6D7F157E1C193B6B0024CBC7 /* 80.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 80.wav; sourceTree = "<group>"; };
 		6D7F157F1C193B6B0024CBC7 /* 90.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 90.wav; sourceTree = "<group>"; };
+		DCEB2C161D3FCA5B006792A2 /* RippleCustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleCustomSegue.swift; sourceTree = "<group>"; };
+		DCEB2C181D3FD10F006792A2 /* RippleCustomSegueUnwind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleCustomSegueUnwind.swift; sourceTree = "<group>"; };
+		DCEB2C1A1D3FF2CC006792A2 /* UpdownCustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdownCustomSegue.swift; sourceTree = "<group>"; };
+		DCEB2C1C1D3FFD4A006792A2 /* UpdownCustomSegueUnwind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdownCustomSegueUnwind.swift; sourceTree = "<group>"; };
+		DCEB2C1E1D422883006792A2 /* swallow-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swallow-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +137,15 @@
 				363404C61B4BBBBA005CA5C0 /* MyParserDelegate.swift */,
 				363404C41B4BBB91005CA5C0 /* SEManager.swift */,
 				366E442C1B429A1E002038AB /* Main.storyboard */,
+				DCEB2C161D3FCA5B006792A2 /* RippleCustomSegue.swift */,
+				DCEB2C1A1D3FF2CC006792A2 /* UpdownCustomSegue.swift */,
+				DCEB2C1C1D3FFD4A006792A2 /* UpdownCustomSegueUnwind.swift */,
+				DCEB2C181D3FD10F006792A2 /* RippleCustomSegueUnwind.swift */,
 				366E442F1B429A1E002038AB /* Images.xcassets */,
 				366E44311B429A1E002038AB /* LaunchScreen.xib */,
 				36F9F54E1B54B790005A3AA4 /* Title.png */,
 				5216B6EA1D003863003175F1 /* Swa-llow3.png */,
+				DCEB2C1E1D422883006792A2 /* swallow-icon.png */,
 				363404D81B4C31F6005CA5C0 /* Sound */,
 				366E44261B429A1E002038AB /* Supporting Files */,
 			);
@@ -212,6 +227,7 @@
 				TargetAttributes = {
 					366E44221B429A1E002038AB = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = F2BGMN3DBM;
 					};
 					366E44371B429A1E002038AB = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -245,6 +261,7 @@
 			files = (
 				6D7F15881C193B6B0024CBC7 /* 80.wav in Resources */,
 				6D7F15861C193B6B0024CBC7 /* 60.wav in Resources */,
+				DCEB2C1F1D422883006792A2 /* swallow-icon.png in Resources */,
 				366E442E1B429A1E002038AB /* Main.storyboard in Resources */,
 				366E44331B429A1E002038AB /* LaunchScreen.xib in Resources */,
 				6D7F15801C193B6B0024CBC7 /* 0.wav in Resources */,
@@ -275,10 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCEB2C1B1D3FF2CC006792A2 /* UpdownCustomSegue.swift in Sources */,
 				363404C51B4BBB91005CA5C0 /* SEManager.swift in Sources */,
 				366E442B1B429A1E002038AB /* ViewController.swift in Sources */,
 				366E44291B429A1E002038AB /* AppDelegate.swift in Sources */,
+				DCEB2C171D3FCA5B006792A2 /* RippleCustomSegue.swift in Sources */,
 				363404C71B4BBBBA005CA5C0 /* MyParserDelegate.swift in Sources */,
+				DCEB2C1D1D3FFD4A006792A2 /* UpdownCustomSegueUnwind.swift in Sources */,
+				DCEB2C191D3FD10F006792A2 /* RippleCustomSegueUnwind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,11 +427,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Forecastone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.satoruhosaka.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = swallow2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -419,11 +442,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Forecastone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.satoruhosaka.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = swallow2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
