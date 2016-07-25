@@ -17,11 +17,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var recbutton: UIButton!
     
     
+    @IBOutlet weak var reclabel: UILabel!
     
     let fileManager = NSFileManager()
     var recorder: [AVAudioRecorder!] = Array(count:10,repeatedValue:nil)
     var recPlayer: [AVAudioPlayer!] = Array(count:10,repeatedValue:nil)
+    var click : AVAudioPlayer?
     let fileName: [String] = ["rec0.wav", "rec10.wav", "rec20.wav", "rec30.wav", "rec40.wav", "rec50.wav", "rec60.wav", "rec70.wav", "rec80.wav", "rec90.wav"]
+    let label: [String] = ["0%","10%","20%","30%","40%","50%","60%","70%","80%","90%"," "]
     
     var now: String = ""
     var from: String = ""
@@ -75,6 +78,7 @@ class ViewController: UIViewController {
         self.moveView = UIView(frame: CGRectMake(-width, 0, width, height))
         self.moveView.backgroundColor = colorArray[1]
         self.view.addSubview(self.moveView)
+        //self.reclabel.text = self.label[1]
         
         // Do any additional setup after loading the view, typically from a nib.
         let urlString = "http://www.drk7.jp/weather/xml/13.xml"
@@ -123,6 +127,7 @@ class ViewController: UIViewController {
 
     
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+    
 
     }
     
@@ -160,16 +165,17 @@ class ViewController: UIViewController {
         moveView.hidden = false
         flag = 1
         if(b == 0){
-            sel()
+   
+        timer2 = NSTimer.scheduledTimerWithTimeInterval(2.4, target: self, selector: #selector(ViewController.sel), userInfo: nil, repeats: true)
+         sel()
         }
-        a=2.4*Double(first)
+        //a=2.4*Double(first)
         //for i in 0...8 {
             //if(flag==1 && stop==0){
             //a = Double(i) * 2.4
             //k = Double(i) * 2.4/(2*2)
             //timer1 = NSTimer.scheduledTimerWithTimeInterval(a, target: self, selector: "bar", userInfo: nil, repeats: false)
             
-            timer2 = NSTimer.scheduledTimerWithTimeInterval(2.4, target: self, selector: #selector(ViewController.sel), userInfo: nil, repeats: true)
     }
     
     func initial(){
@@ -258,18 +264,56 @@ class ViewController: UIViewController {
     }
     
     func recanim(b:Int){
-        let span:CGFloat = width/10
+        let span:CGFloat = width/4
         k = span * CGFloat(b)
         //if (self.colorNum > 3){
         //    self.colorNum = 0
         //}
-        UIView.animateWithDuration(2.4,delay: 0.0,options: [UIViewAnimationOptions.CurveEaseOut,UIViewAnimationOptions.AllowAnimatedContent],
+        self.moveView.backgroundColor = UIColor(red: 0.5, green: 0.0, blue: 0.0, alpha: 0.5)
+        UIView.animateWithDuration(0.6,delay: 0.0,options: [UIViewAnimationOptions.CurveEaseOut,UIViewAnimationOptions.AllowAnimatedContent],
                                    animations: {() -> Void  in
                                     self.moveView.frame.origin.x = -self.width + self.k
-                                    self.moveView.backgroundColor = UIColor(red: 0.5, green: 0.0, blue: 0.0, alpha: 0.5)
-            },completion: {(Bool) -> Void in
-                if(b == 8){
-                    //self.initial()
+            },completion: {(Bool) -> Void in[]
+                if b < 4{
+                self.recanim(b+1)
+                }else{
+                    if self.c < 10 {
+                    self.moveView.removeFromSuperview()
+                    self.moveView = UIView(frame: CGRectMake(-self.width, 0, self.width, self.height))
+                    self.moveView.backgroundColor = UIColor(red: 0.5, green: 0.0, blue: 0.0, alpha: 0.5)
+                    self.view.addSubview(self.moveView)
+                    self.view.sendSubviewToBack(self.moveView)
+                    self.recbutton.titleLabel?.font = UIFont.systemFontOfSize(50)
+                    self.recbutton.setTitle("●", forState: .Normal)
+                    self.reclabel.text = self.label[self.c]
+                    self.recorder[self.c].stop()
+                        if self.c != 0{
+                    for i in 0 ... self.c - 1
+                    {
+                        self.recPlayer[i]?.stop()
+                    }
+                        }
+                    self.recflag  = 0
+                        
+                    }else{
+                        self.moveView.removeFromSuperview()
+                        self.moveView = UIView(frame: CGRectMake(-self.width, 0, self.width, self.height))
+                        self.moveView.backgroundColor = UIColor(red: 0.5, green: 0.0, blue: 0.0, alpha: 0.5)
+                        self.view.addSubview(self.moveView)
+                        self.view.sendSubviewToBack(self.moveView)
+                        self.recorder[self.c - 1].stop()
+                        for i in 0 ... self.c - 1
+                        {
+                            self.recPlayer[i]?.stop()
+                        }
+                        self.recbutton.setTitle("▶︎", forState: .Normal)
+
+                        self.reclabel.hidden = true
+                        self.recflag = 2
+                        self.c = 0
+                        self.resetbutton.hidden = false
+
+                    }
                 }
                 
         })
@@ -403,26 +447,44 @@ class ViewController: UIViewController {
     
     @IBAction func Rec(sender: AnyObject) {
         if recflag == 0 {
+            let clickurl = NSBundle.mainBundle().bundleURL.URLByAppendingPathComponent("Click.wav")
+            do {
+                try click = AVAudioPlayer(contentsOfURL: clickurl)
+            } catch {
+                print("再生時にerror出たよ(´・ω・｀)")
+            }
+            recbutton.titleLabel?.font = UIFont.systemFontOfSize(25)
         recbutton.setTitle("■", forState: .Normal)
+        click!.play()
         moveView.hidden = false
-        //recbutton.titleLabel?.font = UIFont.systemFontOfSize(25)
-        timer3 = NSTimer.scheduledTimerWithTimeInterval(2.4, target: self, selector: #selector(ViewController.recording), userInfo: nil, repeats: true)
+        //timer3 = NSTimer.scheduledTimerWithTimeInterval(2.4, target: self, selector: #selector(ViewController.recording), userInfo: nil, repeats: true)
+        recording()
         recflag = 1
         }
         else if recflag == 1 {
             recbutton.setTitle("●", forState: .Normal)
-            recorder[c].stop()
-            for i in 0 ... c - 1
-            {
-                recPlayer[i]?.stop()
-            }
-            timer3.invalidate()
+            //recbutton.titleLabel?.font = UIFont.systemFontOfSize(50)
+
+            click!.stop()
+            recorder[c - 1].stop()
+            //timer3.invalidate()
+            if c > 1{
+                for i in 0 ... c - 1
+                {
+                    recPlayer[i]?.stop()
+                }
+            c = c - 1
+            }else{
             c = 0
-            moveView.removeFromSuperview()
+            }
+            //moveView.removeFromSuperview()
+            moveView.hidden  = true
             self.moveView = UIView(frame: CGRectMake(-self.width, 0, self.width, self.height))
             self.moveView.backgroundColor = UIColor(red: 0.5, green: 0.0, blue: 0.0, alpha: 0.5)
-            self.view.addSubview(self.moveView)
-            self.view.sendSubviewToBack(self.moveView)
+            self.moveView.layer.removeAllAnimations()
+            //self.view.addSubview(self.moveView)
+            //self.view.sendSubviewToBack(self.moveView)
+   
             recflag = 0
         }
         else if flag == 0 && recflag == 2{
@@ -438,7 +500,10 @@ class ViewController: UIViewController {
             initial()
         }
         resetbutton.hidden = true
+        reclabel.hidden = false
         recbutton.setTitle("●", forState: .Normal)
+        //recbutton.titleLabel?.font = UIFont.systemFontOfSize(50)
+        self.reclabel.text = self.label[0]
         recflag = 0
     }
     
@@ -447,15 +512,16 @@ class ViewController: UIViewController {
         if(c == 10) {
             //play()
             //d = 0
-            recanim(c)
+            recanim(1)
             //initial()
             recbutton.setTitle("▶︎", forState: .Normal)
+            reclabel.hidden = true
             recorder[c - 1].stop()
             for i in 0 ... c - 1
             {
                 recPlayer[i]?.stop()
             }
-            timer3.invalidate()
+            //timer3.invalidate()
             c = 0
             moveView.removeFromSuperview()
             self.moveView = UIView(frame: CGRectMake(-self.width, 0, self.width, self.height))
@@ -466,16 +532,19 @@ class ViewController: UIViewController {
             resetbutton.hidden = false
         }
         else {
-            if c != 0{
+            if c > 0{
                 recorder[c - 1].stop()
                 for i in 0...c - 1{
                     recplay(i)
                 }
             }
             recorder[c].record()
-            c += 1
             print(c)
-            recanim(c)
+            c += 1
+            recanim(1)
+
+
+
         }
     
     }
@@ -517,7 +586,7 @@ class ViewController: UIViewController {
             //self.restorationIdentifier = "sub02"
         }
         
-        if self.restorationIdentifier! == "rec" && sender.direction == UISwipeGestureRecognizerDirection.Up{
+        if self.restorationIdentifier! == "rec" && sender.direction == UISwipeGestureRecognizerDirection.Up && recflag != 1{
             if flag == 1{
                 initial()
             }

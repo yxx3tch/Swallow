@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		366E44331B429A1E002038AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366E44311B429A1E002038AB /* LaunchScreen.xib */; };
 		366E443F1B429A1E002038AB /* ForecastoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E443E1B429A1E002038AB /* ForecastoneTests.swift */; };
 		36F9F54F1B54B790005A3AA4 /* Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 36F9F54E1B54B790005A3AA4 /* Title.png */; };
+		3E0D71EA1D45FEBE00E18ED2 /* Click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D71E91D45FEBE00E18ED2 /* Click.wav */; };
 		5216B6EB1D003863003175F1 /* Swa-llow3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5216B6EA1D003863003175F1 /* Swa-llow3.png */; };
 		6D7F15801C193B6B0024CBC7 /* 0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F15761C193B6B0024CBC7 /* 0.wav */; };
 		6D7F15811C193B6B0024CBC7 /* 10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F15771C193B6B0024CBC7 /* 10.wav */; };
@@ -58,6 +59,7 @@
 		366E443D1B429A1E002038AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		366E443E1B429A1E002038AB /* ForecastoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastoneTests.swift; sourceTree = "<group>"; };
 		36F9F54E1B54B790005A3AA4 /* Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Title.png; sourceTree = "<group>"; };
+		3E0D71E91D45FEBE00E18ED2 /* Click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Click.wav; sourceTree = "<group>"; };
 		5216B6EA1D003863003175F1 /* Swa-llow3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Swa-llow3.png"; sourceTree = "<group>"; };
 		6D7F15761C193B6B0024CBC7 /* 0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 0.wav; sourceTree = "<group>"; };
 		6D7F15771C193B6B0024CBC7 /* 10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 10.wav; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				6D7F157D1C193B6B0024CBC7 /* 70.wav */,
 				6D7F157E1C193B6B0024CBC7 /* 80.wav */,
 				6D7F157F1C193B6B0024CBC7 /* 90.wav */,
+				3E0D71E91D45FEBE00E18ED2 /* Click.wav */,
 			);
 			name = Sound;
 			sourceTree = "<group>";
@@ -236,7 +239,7 @@
 				};
 			};
 			buildConfigurationList = 366E441E1B429A1E002038AB /* Build configuration list for PBXProject "Forecastone" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -271,6 +274,7 @@
 				5216B6EB1D003863003175F1 /* Swa-llow3.png in Resources */,
 				6D7F15851C193B6B0024CBC7 /* 50.wav in Resources */,
 				6D7F15831C193B6B0024CBC7 /* 30.wav in Resources */,
+				3E0D71EA1D45FEBE00E18ED2 /* Click.wav in Resources */,
 				6D7F15841C193B6B0024CBC7 /* 40.wav in Resources */,
 				6D7F15871C193B6B0024CBC7 /* 70.wav in Resources */,
 				6D7F15821C193B6B0024CBC7 /* 20.wav in Resources */,
@@ -431,7 +435,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Forecastone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = swallow2;
+				PRODUCT_BUNDLE_IDENTIFIER = "new-swallow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -446,7 +450,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Forecastone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = swallow2;
+				PRODUCT_BUNDLE_IDENTIFIER = "new-swallow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

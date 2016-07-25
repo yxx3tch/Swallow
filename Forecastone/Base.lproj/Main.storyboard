@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qv5-Mg-pWQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qv5-Mg-pWQ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -108,10 +108,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="pBH-zO-x7h"/>
                                 <exclude reference="8is-Eh-eUw"/>
-                                <exclude reference="lzy-c5-A0A"/>
                                 <exclude reference="CJe-Z1-vg7"/>
+                                <exclude reference="lzy-c5-A0A"/>
+                                <exclude reference="pBH-zO-x7h"/>
                             </mask>
                         </variation>
                     </view>
@@ -163,21 +163,27 @@
                                     <constraint firstAttribute="width" constant="200" id="qCP-Tj-TeC"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-Kk-Nx9">
-                                <rect key="frame" x="173" y="498" width="30" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="●">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="Rec:" destination="Gbh-TW-tUN" eventType="touchDown" id="qDD-8u-CXp"/>
-                                </connections>
-                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWi-Uk-QCp">
                                 <rect key="frame" x="164" y="574" width="46" height="30"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="reset:" destination="Gbh-TW-tUN" eventType="touchDown" id="yyK-h1-EFc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuJ-xe-81G">
+                                <rect key="frame" x="167" y="73" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-Kk-Nx9">
+                                <rect key="frame" x="165" y="498" width="45" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <state key="normal" title="●">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Rec:" destination="Gbh-TW-tUN" eventType="touchDown" id="qDD-8u-CXp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -186,6 +192,8 @@
                             <constraint firstItem="8Md-Kk-Nx9" firstAttribute="centerX" secondItem="JaR-Vj-xzX" secondAttribute="centerX" id="7CQ-VS-2jv"/>
                             <constraint firstItem="JaR-Vj-xzX" firstAttribute="centerY" secondItem="y4L-S1-q5B" secondAttribute="centerY" id="TjN-2R-6LG"/>
                             <constraint firstAttribute="centerY" secondItem="JaR-Vj-xzX" secondAttribute="centerY" id="Vqj-3s-VkL"/>
+                            <constraint firstItem="MuJ-xe-81G" firstAttribute="centerX" secondItem="y4L-S1-q5B" secondAttribute="centerX" id="Ysf-OG-8Rn"/>
+                            <constraint firstItem="MuJ-xe-81G" firstAttribute="centerY" secondItem="y4L-S1-q5B" secondAttribute="centerY" constant="-150" id="atn-4C-6aY"/>
                             <constraint firstItem="TWi-Uk-QCp" firstAttribute="centerX" secondItem="y4L-S1-q5B" secondAttribute="centerX" id="bi8-cz-oWb"/>
                             <constraint firstItem="TWi-Uk-QCp" firstAttribute="centerY" secondItem="y4L-S1-q5B" secondAttribute="centerY" constant="225" id="ca5-Cz-XYN"/>
                             <constraint firstItem="JaR-Vj-xzX" firstAttribute="centerY" secondItem="y4L-S1-q5B" secondAttribute="centerY" id="f8L-TN-1yD"/>
@@ -207,6 +215,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="recbutton" destination="8Md-Kk-Nx9" id="vDg-vr-I4D"/>
+                        <outlet property="reclabel" destination="MuJ-xe-81G" id="tmQ-B9-wip"/>
                         <outlet property="resetbutton" destination="TWi-Uk-QCp" id="TGT-iI-bqS"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="shitaswipe1" customClass="UpdownCustomSegueUnwind" customModule="Forecastone" customModuleProvider="target" id="tPH-XS-2Ev"/>
                         <segue destination="znl-vj-4yo" kind="modal" identifier="shitaswipe2" customClass="UpdownCustomSegueUnwind" customModule="Forecastone" customModuleProvider="target" id="Qta-1Z-Xth"/>
@@ -259,10 +268,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="uq2-Cx-gx7"/>
-                                <exclude reference="Eah-8i-Ui3"/>
                                 <exclude reference="9GS-8c-ScB"/>
+                                <exclude reference="Eah-8i-Ui3"/>
                                 <exclude reference="K9s-R3-J7t"/>
+                                <exclude reference="uq2-Cx-gx7"/>
                             </mask>
                         </variation>
                     </view>
@@ -279,11 +288,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Swa-llow3.png" width="2472" height="648"/>
+        <image name="Swa-llow3.png" width="206" height="54"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Qta-1Z-Xth"/>
-        <segue reference="rS1-TY-UsK"/>
+        <segue reference="ZwV-hu-hIY"/>
         <segue reference="tPH-XS-2Ev"/>
         <segue reference="qun-I8-NEV"/>
     </inferredMetricsTieBreakers>
